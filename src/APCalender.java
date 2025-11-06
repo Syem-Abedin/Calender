@@ -1,5 +1,5 @@
 public class APCalender {
-    public static boolean isLeapYear(int year) {
+    /** This should be private but set public for testing purposes */public static boolean isLeapYear(int year) {
         return (year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0));
     }
 
@@ -15,7 +15,7 @@ public class APCalender {
         return i;
     }
 
-    public static int firstDayOfYear(int year) {
+    /** This should be private but set public for testing purposes */public static int firstDayOfYear(int year) {
         int day = 1;
         for (int y = 1900; y < year; y++) {
             if (isLeapYear(y)) {
@@ -27,7 +27,7 @@ public class APCalender {
         return day % 7;
     }
 
-    public static int dayOfYear(int month, int day, int year) {
+    /** This should be private but set public for testing purposes */public static int dayOfYear(int month, int day, int year) {
         int[] days = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         if (isLeapYear(year)) {
             days[1] = 29;
